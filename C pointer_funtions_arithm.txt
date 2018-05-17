@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+unsigned char add_function(char*,char *);
+
+unsigned char sub_function(char*,char *);
+
+unsigned char div_function(char*,char *);
+
+int main()
+
+{
+    
+char a=4,b=90,c=100;
+    
+char *p,*q;
+    
+p=&b; q=&a;
+    
+char add_value=0,sub_value=0,div_value=0;
+    
+add_value=add_function(p,q);
+    
+printf("%d\n",add_value);
+    
+sub_value=sub_function(p,q);
+    
+printf("%d\n",sub_value);
+    
+div_value=div_function(p,q);
+    
+printf("%d\n",div_value);
+    
+
+}
+
+unsigned char add_function(char*a,char *b)
+
+{
+    
+int temp=0;
+    
+temp=*a+*b;
+    
+return temp;
+
+}
+
+unsigned char sub_function(char*a,char *b)
+
+{
+    
+int temp=0;
+    
+temp=*a-*b;
+    
+return temp;
+
+}
+
+unsigned char div_function(char*a,char *b)
+
+{
+    
+int temp=0;
+    
+temp=*a/(*b);
+    
+return temp;
+
+}
